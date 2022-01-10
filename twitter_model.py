@@ -65,7 +65,8 @@ def read_data(data_file):
         count += 1
         if count == 1:
             continue
-
+        print(line)
+        break
         id, text, clazz = line
         classes.append(int(clazz))
         texts.append(text)

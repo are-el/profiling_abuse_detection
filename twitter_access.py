@@ -10,6 +10,7 @@ import networkx
 import os
 import time
 import tweepy
+import access_tokens
 
 
 logger = logging.getLogger('TwitterAccess')
@@ -27,15 +28,17 @@ class TwitterAccess:
 
 
     def load_api(self):
-        consumer_key = ''
-        consumer_secret = ''
-        access_token = ''
-        access_secret = ''
-        auth = OAuthHandler(consumer_key, consumer_secret)
-        auth.set_access_token(access_token, access_secret)
+        # consumer_key = ''
+        # consumer_secret = ''
+        # access_token = ''
+        # access_secret = ''
+        # auth = OAuthHandler(consumer_key, consumer_secret)
+        # auth.set_access_token(access_token, access_secret)
+
+        client = tweepy.Client(bearer_token=access_tokens.tw_bearer_token)
 
         # Load the twitter API via Tweepy
-        return tweepy.API(auth)
+        return client
 
 
     # Status Methods

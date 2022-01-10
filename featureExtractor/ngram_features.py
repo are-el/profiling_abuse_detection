@@ -1,4 +1,4 @@
-from sklearn.externals import joblib
+import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 import datetime

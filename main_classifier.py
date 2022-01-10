@@ -2,12 +2,12 @@ from featureExtractor.dnn_features import DNNFeatures
 from featureExtractor.feature_extractor import FeatureExtractor
 from featureExtractor.ngram_features import NGramFeatures
 from sklearn.linear_model import LogisticRegression
-from sklearn.externals import joblib
+import joblib
 
 import coloredlogs
 import copy
 import datetime
-import lightgbm
+import lightgbm   # installed with conda fixed this
 import logging
 import numpy
 import os
